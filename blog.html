@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Cast</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #456;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        article {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #000;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sports Cast</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('hot takes')">Hot Takes</a>
+        <a href="#" onclick="showSection('news')">News</a>
+        <a href="#" onclick="showSection('about')">About</a>
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to our Sports Blog!</h2>
+        <p>This is the home section where you can find general information and updates.</p>
+    </section>
+
+    <section id="hot takes" style="display:none;">
+        <h2>Hot Takes</h2>
+        <article>
+            <h3>Article Title 1</h3>
+            <p>This is a sample article expressing our opinion on a sports topic.</p>
+        </article>
+        <article>
+            <h3>Article Title 2</h3>
+            <p>Another opinion article about a different sports event.</p>
+        </article>
+    </section>
+
+    <section id="news" style="display:none;">
+        <h2>News</h2>
+        <article>
+            <h3>Breaking News: Sports Event</h3>
+            <p>Stay updated with the latest news about ongoing sports events.</p>
+        </article>
+        <article>
+            <h3>Upcoming Tournaments</h3>
+            <p>Find out about the upcoming sports tournaments and matches.</p>
+        </article>
+    </section>
+
+    <section id="about" style="display:none;">
+        <h2>About Us</h2>
+        <p>Learn more about the authors of this sports blog and their passion for sports.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sports Blog. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
